@@ -8,7 +8,7 @@ export const store = new Vuex.Store({
     },
     mutations: {
         DELETE_TODO(state, todoItem) {
-            state.todos.splice(state.todos.indexOf(todoItem), 1);
+            state.todos = state.todos.filter(todo => todoItem.id !== todo.id)
         },
         NEW_TODO(state, todoItem) {
             state.todos.push({
@@ -21,7 +21,7 @@ export const store = new Vuex.Store({
         TOGGlE_TODO_STATUS(state, todoItem) {
             todoItem.completed = !todoItem.completed;
         },
-        GET_TODOS(state, todos) {
+        SET_TODOS(state, todos) {
             state.todos = todos;
         }
     },
@@ -35,11 +35,8 @@ export const store = new Vuex.Store({
         toggleTodoStatus({commit}, todoItem) {
             commit('TOGGlE_TODO_STATUS', todoItem);
         },
-        getTodos({commit}, todos) {
-            commit('GET_TODOS', todos)
+        setTodos({commit}, todos) {
+            commit('SET_TODOS', todos)
         }
     },
-    getters: {
-
-    }
 })

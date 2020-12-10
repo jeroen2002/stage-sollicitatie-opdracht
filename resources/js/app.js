@@ -14,7 +14,7 @@ Vue.use(BootstrapVue);
 Vue.component('home', require('./vue/pages/Home').default);
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
-const app = new Vue({
+new Vue({
     el: '#app',
     store: store
 });

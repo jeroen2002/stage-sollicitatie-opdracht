@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f99396-81c9-438c-8ba6-a33478a84642" name="Default Changelist" comment="" />
+    <list default="true" id="ccf47d70-5647-4768-b54d-9620df80fc76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/vue/components/Edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/vue/components/Create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/vue/components/Create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/vue/components/Delete.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/vue/components/Delete.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/vue/components/List.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/vue/components/List.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/vue/components/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/vue/components/Show.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/vue/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/vue/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -120,7 +142,7 @@
       <path value="$PROJECT_DIR$/vendor/brick/math" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1kgfcwBKnHIFJQoEiH3xg211H1Z" />
+  <component name="ProjectId" id="1kkdQqCID7IMZQLmaARu8X7Xvq3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -128,35 +150,34 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/img" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="\\wsl$\Ubuntu-20.04\home\jeroen\todo-list\resources\img" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="\\wsl$\Ubuntu-20.04\home\jeroen\todo-list\resources\img" />
-      <recent name="\\wsl$\Ubuntu-20.04\home\jeroen\todo-list\resources" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner scope="XML" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="95f99396-81c9-438c-8ba6-a33478a84642" name="Default Changelist" comment="" />
-      <created>1606127237845</created>
+      <changelist id="ccf47d70-5647-4768-b54d-9620df80fc76" name="Default Changelist" comment="" />
+      <created>1606248512140</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1606127237845</updated>
-      <workItem from="1606127239032" duration="21919000" />
+      <updated>1606248512140</updated>
+      <workItem from="1606248515175" duration="213000" />
+      <workItem from="1606248783279" duration="18000" />
+      <workItem from="1606297674591" duration="12032000" />
+      <workItem from="1606391622442" duration="46000" />
+      <workItem from="1606395073643" duration="672000" />
+      <workItem from="1606463933397" duration="342000" />
+      <workItem from="1606471642277" duration="1250000" />
+      <workItem from="1606739435982" duration="3299000" />
+      <workItem from="1606903690346" duration="11000" />
+      <workItem from="1607115681669" duration="1386000" />
+      <workItem from="1607173413307" duration="9199000" />
+      <workItem from="1607284504838" duration="3000" />
+      <workItem from="1607344675918" duration="38000" />
+      <workItem from="1607349423432" duration="1753000" />
+      <workItem from="1607431480723" duration="5626000" />
+      <workItem from="1607508821073" duration="7530000" />
     </task>
     <servers />
   </component>
@@ -164,17 +185,29 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="478" y="145" width="579" height="534" key="find.popup" timestamp="1606163883375">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1606337551061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="478" y="145" width="579" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1606163883375" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1606164252649">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1606337551061" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1607344712331">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1606164252649" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606163830571">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607344712331" />
+    <state x="547" y="110" key="VCS.ChangeListViewerDialog" timestamp="1606337541115">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606163830571" />
+    <state x="547" y="110" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1606337541115" />
+    <state x="479" y="145" width="578" height="534" key="find.popup" timestamp="1607516620686">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="479" y="145" width="578" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1607516620686" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1607176973805">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1607176973805" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607514691053">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607514691053" />
   </component>
 </project>

@@ -12,14 +12,17 @@ export const store = new Vuex.Store({
         },
         NEW_TODO(state, todoItem) {
             state.todos.push({
-                title: todoItem.title,
-                description: todoItem.description,
-                image: todoItem.image,
-                completed: false
-            });
+                'id': todoItem.id,
+                'title': todoItem.title,
+                'description': todoItem.description,
+                'image_name': todoItem.image_name,
+            })
         },
         TOGGlE_TODO_STATUS(state, todoItem) {
             todoItem.completed = !todoItem.completed;
+        },
+        GET_TODOS(state, todos) {
+            state.todos = todos;
         }
     },
     actions: {
@@ -31,6 +34,9 @@ export const store = new Vuex.Store({
         },
         toggleTodoStatus({commit}, todoItem) {
             commit('TOGGlE_TODO_STATUS', todoItem);
+        },
+        getTodos({commit}, todos) {
+            commit('GET_TODOS', todos)
         }
     },
     getters: {

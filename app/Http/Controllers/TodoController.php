@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Todo;
-use Faker\Provider\Image;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Storage;
@@ -11,16 +11,12 @@ use Illuminate\Support\Facades\Validator;
 
 class TodoController extends Controller
 {
-    /**
-     * @return array
-     */
-    public function index()
+    public function index(): JsonResponse
     {
         $todos = Todo::all();
 
         $response = [
             'data' => null,
-            'status' => 200,
             'success' => false
         ];
 
@@ -28,29 +24,24 @@ class TodoController extends Controller
             $response['data'] = $todos;
         }
 
-        return $response;
+        return Response::json($response, 200);
     }
 
-    /**
-     * @param Request $request
-     * @return false|string
-     */
-    public function create(Request $request)
+    public function create(Request $request): JsonResponse
     {
         $validator = Validator::make($request->all(), [
-            'title' => 'required',
-            'description' => 'nullable',
+            'title' => 'required|max:255',
+            'description' => 'nullable|max:255',
             'image' => 'nullable|image'
         ]);
 
         if ($validator->fails()) {
-            return json_encode([
+            return Response::json([
                 'message' => 'Er zijn fouten opgetreden',
                 'data' => null,
-                'status' => 400,
                 'success' => false,
                 'errors' => $validator->errors(),
-            ]);
+            ], 400);
         }
 
         $store = '';
@@ -65,21 +56,15 @@ class TodoController extends Controller
             'image_name' => basename($store) ?? ''
         ]);
 
-        $response = [
+        return Response::json([
             'message' => 'Todo is succesvol toegevoegd!',
             'data' => $todo,
             'status' => 200,
             'success' => true
-        ];
-
-        return json_encode($response);
+        ], 200);
     }
 
-    /**
-     * @param int $id
-     * @return false|\Illuminate\Http\JsonResponse|string
-     */
-    public function destroy(int $id)
+    public function destroy(int $id): JsonResponse
     {
         $todo = Todo::find($id);
 
@@ -93,15 +78,12 @@ class TodoController extends Controller
         $todo->delete();
 
         return Response::json([
-            'message' => 'Verwijderen gelukt!',
+            'message' => 'Todo is verwijderd!',
             'success' => true
         ], 200);
     }
 
-    /**
-     * @param int $id
-     */
-    public function toggleTodo(int $id)
+    public function toggleTodo(int $id): JsonResponse
     {
         $todo = Todo::find($id);
 

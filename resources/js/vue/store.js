@@ -19,7 +19,8 @@ export const store = new Vuex.Store({
             })
         },
         TOGGlE_TODO_STATUS(state, todoItem) {
-            todoItem.completed = !todoItem.completed;
+            const todo = state.todos.find(todo => todo.id === todoItem.id);
+            todo.is_done = !todo.is_done;
         },
         SET_TODOS(state, todos) {
             state.todos = todos;
@@ -37,6 +38,6 @@ export const store = new Vuex.Store({
         },
         setTodos({commit}, todos) {
             commit('SET_TODOS', todos)
-        }
+        },
     },
 })

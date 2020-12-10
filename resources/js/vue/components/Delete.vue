@@ -8,9 +8,11 @@
     />
 
     <b-tooltip :target="'tooltip-target-' + todo.id" triggers="click">
-      <p>Weet u zeker dat u deze todo wil verwijderen?</p>
-      <button class="btn btn-danger" @click="deleteTodo">Ja</button>
-      <button class="btn btn-primary" @click="closeTooltip">Nee</button>
+      <div class="tooltip-content">
+        <p>Weet u zeker dat u deze todo wil verwijderen?</p>
+        <button class="btn btn-danger" @click="deleteTodo">Ja</button>
+        <button class="btn btn-primary" @click="closeTooltip">Nee</button>
+      </div>
     </b-tooltip>
   </div>
 </template>
@@ -54,7 +56,11 @@ export default {
 </script>
 
 <style>
+.tooltip-content {
+  padding: 10px;
+}
 .trash-custom:hover {
   color: red;
+  cursor: pointer;
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>To do's</h1>
+    <p v-if="!todos.length > 0" class="text-center">Er zijn nog geen to do's.</p>
     <b-list-group>
       <b-list-group-item v-for="(value, index) in todos" :key="index">
         <b-row>
@@ -12,17 +13,17 @@
               :id="`todo-${value.id}`"
               name="todo"
               value="todo"
+              style="margin-right: 15px;"
             />
             <label
               :for="`todo-${value.id}`"
-              :data-content="value.title"
+              :data-content="value.title" 
               class="todo"
               >{{ value.title }}</label
             >
           </b-col>
           <b-col style="top: 5px">
             <Show :todo="value" />
-            <Edit :todo="value" />
             <Delete :todo="value" />
           </b-col>
         </b-row>
@@ -30,7 +31,7 @@
     </b-list-group>
   </div>
 </template>
-<style>
+<style scoped>
 input[type="checkbox"] {
   top: 5px;
   position: relative;
@@ -97,10 +98,9 @@ label::before {
 import Delete from "./Delete";
 import Show from "./Show";
 import axios from "axios";
-import Edit from "./Edit";
 
 export default {
-  components: { Edit, Show, Delete },
+  components: { Show, Delete },
   mounted() {
     axios.get("/api/todos").then((res) => {
       if (res.data.data) {
@@ -116,7 +116,7 @@ export default {
   methods: {
     toggleTodoStatus(todo) {
       axios
-        .post(`/api/${todo.id}/toggle-todo`)
+        .post(`/api/todo/${todo.id}/toggle`)
         .then((response) => {
           this.$store.dispatch("toggleTodoStatus", todo);
         })

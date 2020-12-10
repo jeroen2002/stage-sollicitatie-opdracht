@@ -23,7 +23,13 @@
           placeholder="Voeg hier de omschrijving toe"
           rows="3"
           max-rows="6"
+          @blur="onTextAreaBlur"
         ></b-form-textarea>
+        <b-form-invalid-feedback
+          id="input-1-live-feedback"
+          v-if="this.errors.description"
+          >{{ this.errors.description }}
+        </b-form-invalid-feedback>
       </b-form-group>
       <div id="preview" v-if="form.imagePreview">
         <b-img
@@ -44,7 +50,6 @@
       <b-form-invalid-feedback
         id="input-1-live-feedback"
         v-if="this.errors.image"
-        v-model="this.form.image"
         >{{ this.errors.image }}
       </b-form-invalid-feedback>
       <br />
@@ -67,7 +72,13 @@ import Noty from "noty";
 export default {
   computed: {
     buttonDisabled() {
-      return !this.form.title || this.errors.image || this.errors.title;
+      return (
+        !this.form.title ||
+        this.errors.image ||
+        this.errors.title ||
+        this.form.title.length >= 255 ||
+        this.form.description.length >= 255
+      );
     },
   },
   data() {
@@ -81,6 +92,7 @@ export default {
       errors: {
         title: null,
         image: null,
+        description: null,
       },
     };
   },
@@ -105,8 +117,18 @@ export default {
     onTitleInputBlur(event) {
       if (!event.target.value) {
         this.errors.title = "Het titelveld is verplicht!";
+      } else if (event.target.value.length >= 255) {
+        this.errors.title = "De inhoud mag niet langer zijn dan 255 karakters.";
       } else {
         this.errors.title = null;
+      }
+    },
+    onTextAreaBlur(event) {
+      if (event.target.value.length >= 255) {
+        this.errors.description =
+          "De inhoud mag niet langer zijn dan 255 karakters.";
+      } else {
+        this.errors.description = null;
       }
     },
     createTodo(event) {
